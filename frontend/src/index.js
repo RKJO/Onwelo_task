@@ -12,6 +12,7 @@ import "assets/scss/main.scss";
 
 import BaseLayout from "containers/BaseLayout";
 import TablesSection from "containers/TablesSection";
+import VoatingFormSection from "containers/VoatingFormSection";
 
 const container = document.getElementById("root");
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
@@ -19,6 +20,7 @@ root.render(
   <Provider store={store}>
     <BaseLayout>
       <TablesSection />
+      <VoatingFormSection />
     </BaseLayout>
   </Provider>
 );

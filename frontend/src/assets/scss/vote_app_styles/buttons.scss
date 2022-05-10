@@ -1,13 +1,8 @@
-.btn,
-.navbar .navbar-nav > a.btn {
-  border-width: $border-thick;
-  font-weight: $font-weight-semi;
-  font-size: $font-size-small;
-  line-height: $line-height;
-  text-transform: uppercase;
-  border: none;
-  margin: 10px 1px;
-  border-radius: $border-radius-small;
-  padding: $padding-btn-vertical $padding-btn-horizontal;
-  cursor: pointer;
+.btn-onvelo {
+  background-color: $onvelo-orange-color !important;
+}
+.btn-onvelo.disabled {
+  background-color: #e3e3e3 !important;
+  color: #66615b;
+  cursor: not-allowed;
 }

@@ -23,7 +23,7 @@ const VoatersCardTable = ({ voaters_list, voaters_loading, addVoater }) => {
         <CardHeader>
           <h4>Voaters</h4>
           <FontAwesomeIcon
-            className={"btn-onvelo"}
+            className={"btn-card-onvelo"}
             icon={faCirclePlus}
             onClick={() => setShowModal(true)}
           />

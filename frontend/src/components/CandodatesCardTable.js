@@ -23,30 +23,34 @@ const CandodatesCardTable = ({
         <CardHeader>
           <h4>Candidates</h4>
           <FontAwesomeIcon
-            className={"btn-onvelo"}
+            className={"btn-card-onvelo"}
             icon={faCirclePlus}
             onClick={() => setShowModal(true)}
           />
         </CardHeader>
         <CardBody>
-          <Table bordered size="sm" className="text-center">
-            <thead>
-              <tr>
-                <th className="name">Name</th>
-                <th className="info">Votes</th>
-              </tr>
-            </thead>
-            <tbody>
-              {candidates_list.map((candidate) => {
-                return (
-                  <tr key={candidate.id}>
-                    <td>{candidate.candidate_name}</td>
-                    <td>{candidate.votes}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </Table>
+          {candidates_loading ? (
+            <h5>Loading...</h5>
+          ) : (
+            <Table bordered size="sm" className="text-center">
+              <thead>
+                <tr>
+                  <th className="name">Name</th>
+                  <th className="info">Votes</th>
+                </tr>
+              </thead>
+              <tbody>
+                {candidates_list.map((candidate) => {
+                  return (
+                    <tr key={candidate.id}>
+                      <td>{candidate.candidate_name}</td>
+                      <td>{candidate.votes}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </Table>
+          )}
         </CardBody>
       </Card>
       <ModalForm

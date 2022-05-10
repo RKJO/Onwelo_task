@@ -1,6 +1,7 @@
 import {
   GET_CANDIDATES_LIST,
   ADD_NEW_CANDIDATE,
+  ADD_NEW_VOTE,
   CANDIDATES_SET_LOADING,
 } from "context/actions/types";
 
@@ -8,13 +9,13 @@ const initialState = {
   candidates_list: [
     {
       id: 1,
-      candidate_name: "John",
-      votes: 1,
+      candidate_name: "Johny Bravo",
+      votes: 2,
     },
     {
       id: 2,
-      candidate_name: "Doe",
-      votes: 7,
+      candidate_name: "Pluto",
+      votes: 5,
     },
   ],
   candidates_loading: false,
@@ -35,6 +36,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         candidates_list: new_candidate_list,
+        candidates_loading: false,
+      };
+    case ADD_NEW_VOTE:
+      return {
+        ...state,
         candidates_loading: false,
       };
     case CANDIDATES_SET_LOADING:

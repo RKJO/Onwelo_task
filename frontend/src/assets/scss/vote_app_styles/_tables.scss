@@ -1,9 +1,23 @@
-table {
+.table {
   margin-bottom: 0px !important;
   th.name {
-    width: 70%; /* Not necessary, since only 70% width remains */
+    width: 70%;
   }
   th.info {
     width: 30%;
+  }
+  thead,
+  tbody,
+  tfoot {
+    tr > th,
+    tr > td {
+      border-top: 1px solid #373737;
+      padding: 20px;
+    }
+  }
+  > thead > tr > th {
+    border-bottom-width: 0;
+    font-size: 1.35em;
+    font-weight: 300;
   }
 }

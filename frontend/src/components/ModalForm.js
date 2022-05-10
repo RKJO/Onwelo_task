@@ -32,6 +32,7 @@ const ModalForm = ({ inputName, showModal, setShowModal, handleSave }) => {
             type="button"
             onClick={() => {
               handleSave(newName);
+              setNewName("");
               setShowModal(false);
             }}
           >
@@ -44,7 +45,10 @@ const ModalForm = ({ inputName, showModal, setShowModal, handleSave }) => {
             className="btn-link"
             color="danger"
             type="button"
-            onClick={() => setShowModal(false)}
+            onClick={() => {
+              setNewName("");
+              setShowModal(false);
+            }}
           >
             Never mind
           </Button>

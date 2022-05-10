@@ -12,7 +12,7 @@ const BaseLayout = (props) => {
           <span className="navbar-text"> Task Vote app </span>
         </NavbarBrand>
       </Navbar>
-      {props.children}{" "}
+      <main className={"main-conteiner"}>{props.children}</main>
       <footer className="py-2 bg-onvelo text-white text-center fixed-bottom">
         Copyright &copy;
         <span className="year"> 2022</span>
