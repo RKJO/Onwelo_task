@@ -1,0 +1,9 @@
+table {
+  margin-bottom: 0px !important;
+  th.name {
+    width: 70%; /* Not necessary, since only 70% width remains */
+  }
+  th.info {
+    width: 30%;
+  }
+}

@@ -1,0 +1,26 @@
+.card {
+  border-radius: $border-radius-base;
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  color: $white-color;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  border: 1 solid $onvelo-dark-color;
+
+  .card-header {
+    background-color: $onvelo-dark-color;
+  }
+
+  .card-body {
+    padding: 0px;
+
+    // padding-right: 0px;
+  }
+  .btn-onvelo {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    color: $onvelo-orange-color;
+  }
+}

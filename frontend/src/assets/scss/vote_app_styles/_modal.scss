@@ -1,0 +1,76 @@
+.modal-header {
+  border-bottom: 1px solid $onvelo-dark-color;
+  padding: 20px;
+  text-align: center;
+  display: block !important;
+}
+.modal-dialog {
+  &.modal-sm,
+  &.modal-register {
+    .modal-header {
+      button.close {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.modal-content {
+  border: 0 none;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15), 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  .modal-header {
+    h6 {
+      margin-top: 10px;
+    }
+  }
+}
+
+.modal-dialog {
+  padding-top: 60px;
+}
+.modal-body {
+  padding: 20px 50px;
+  color: #000;
+}
+.modal-footer {
+  border-top: 1px solid $onvelo-dark-color;
+  padding: 0px;
+
+  &.no-border-footer {
+    border-top: 0 none;
+  }
+}
+.modal-footer .left-side,
+.modal-footer .right-side {
+  display: inline-block;
+  text-align: center;
+  width: 48%;
+  padding: 5px;
+}
+
+.modal-footer .btn-link {
+  padding: 20px;
+  width: 100%;
+  margin: 0;
+  color: $white-color;
+  text-decoration: none;
+}
+
+.modal-footer .divider {
+  background-color: #dddddd;
+  display: inline-block;
+  float: inherit;
+  height: 63px;
+  margin: 0px -3px;
+  width: 1px;
+}
+
+.modal-header:after {
+  display: table;
+  content: " ";
+}
+.modal-header:before {
+  display: table;
+  content: " ";
+}
