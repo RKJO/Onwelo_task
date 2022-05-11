@@ -4,9 +4,9 @@ import {
 } from "context/actions/types";
 
 export const AddCandidate = (candidate) => async (dispatch, getState) => {
-  dispatch(() => ({ type: CANDIDATES_SET_LOADING }));
+  dispatch({ type: CANDIDATES_SET_LOADING });
 
-  let candidates_list_length =
+  const candidates_list_length =
     getState().CandidatesReducer.candidates_list.length;
   const newCandidate = {
     id: candidates_list_length + 1,

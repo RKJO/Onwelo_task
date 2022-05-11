@@ -24,21 +24,27 @@ const initialState = {
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (state = initialState, action) => {
   switch (action.type) {
-    case GET_CANDIDATES_LIST:
-      return {
-        ...state,
-        ...action.payload,
-        candidates_loading: false,
-      };
+    // case GET_CANDIDATES_LIST:
+    //   return {
+    //     ...state,
+    //     ...action.payload,
+    //     candidates_loading: false,
+    //   };
     case ADD_NEW_CANDIDATE:
       const new_candidate_list = state.candidates_list;
       new_candidate_list.push(action.payload);
+
       return {
         ...state,
         candidates_list: new_candidate_list,
         candidates_loading: false,
       };
     case ADD_NEW_VOTE:
+      const candidate = state.candidates_list.filter(
+        (candidate) => candidate.id === action.payload
+      )[0];
+      candidate.votes++;
+
       return {
         ...state,
         candidates_loading: false,

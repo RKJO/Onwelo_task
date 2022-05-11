@@ -24,12 +24,12 @@ const initialState = {
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (state = initialState, action) => {
   switch (action.type) {
-    case GET_VOATER_LIST:
-      return {
-        ...state,
-        ...action.payload,
-        voaters_loading: false,
-      };
+    // case GET_VOATER_LIST:
+    //   return {
+    //     ...state,
+    //     ...action.payload,
+    //     voaters_loading: false,
+    //   };
     case ADD_NEW_VOATER:
       const new_voater_list = state.voaters_list;
       new_voater_list.push(action.payload);
@@ -39,6 +39,10 @@ export default (state = initialState, action) => {
         voaters_loading: false,
       };
     case HAS_VOATED:
+      const voater = state.voaters_list.filter(
+        (voater) => voater.id === action.payload
+      )[0];
+      voater.has_voted = true;
       return {
         ...state,
         voaters_loading: false,
